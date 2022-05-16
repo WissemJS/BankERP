@@ -25,7 +25,7 @@ const setAccount = asyncHandler( async (req, res) => {
         salary : req.body.salary,
         amount : req.body.amount,
     })
-    res.status(200).json() 
+    res.status(200).json(account) 
 } )
 
 // @desc Update account
@@ -36,7 +36,7 @@ const putAccount = asyncHandler(async (req, res) => {
   
     if (!account) {
       res.status(400)
-      throw new Error('Goal not found')
+      throw new Error('transaction not found')
     }
 
     const updatedAccount = await Account.findByIdAndUpdate(req.params.id, req.body, {

@@ -17,6 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/account', require('./routes/accountRoutes'))
+app.use('/api/transaction', require('./routes/transactionRoutes'))
 
 app.use(errorHandler)
 

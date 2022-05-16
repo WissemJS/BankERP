@@ -19,11 +19,11 @@ const accountSchema = mongoose.Schema(
         required: [true, 'Please add phone number'],
     },
     salary : {
-        type : String,
+        type : Number,
         required: [true, 'Please add salary per month'],
     },
     amount  : {
-        type : String,
+        type : Number,
         required: [true, 'Please add amount to start the account '],
     },
   },
